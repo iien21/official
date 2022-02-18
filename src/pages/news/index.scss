@@ -1,0 +1,76 @@
+@import "@co/style";
+
+.news {
+  margin: 0;
+  padding: 60px 0 0 0;
+  @include themeWidth;
+  .body {
+    @include cenTheWid;
+    padding-bottom: 55px;
+    .con {
+      h3 {
+        width: 95px;
+        // height: 60px;
+        font-size: 40px;
+        font-family: PuHuiTiB;
+        font-weight: bold;
+        color: #1e70ff;
+        line-height: 60px;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+      }
+      h3::before {
+        position: absolute;
+        content: "";
+        width: 8px;
+        height: 24px;
+        background: #1e70ff;
+        top: middle;
+        left: 0;
+        top: 18px;
+      }
+      & > div {
+        display: flex;
+        .box {
+          display: flex;
+          padding: 16px;
+          box-sizing: border-box;
+          width: 412px;
+          height: 372px;
+          background: #ffffff;
+          transition: all 0.5s;
+          flex-direction: column;
+          cursor: pointer;
+          & > img {
+            width: 380px;
+            height: 214px;
+          }
+          & > p {
+            height: 70px;
+            font-size: 24px;
+            font-family: PuHuiTiM;
+            font-weight: 500;
+            color: #2b3749;
+            margin: 20px 0;
+          }
+          & > span {
+            height: 24px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #acb8cb;
+            line-height: 24px;
+          }
+          &:hover {
+            box-shadow: 0px 0px 20px 1px rgba(43, 55, 73, 0.2);
+            z-index: 2;
+            & > p {
+              color: #1e70ff;
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "@co/style";
+
+.foot {
+  height: 280px;
+  background: #ffffff;
+//   box-shadow: inset 0px 1px 0px 1px #dfe5ef;
+  border-top: 1px solid #dfe5ef;
+  & > div {
+    width: $themeWidth;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+    align-items: flex-start;
+    padding-top: 60px;
+    box-sizing: border-box;
+    & > div:first-child {
+      width: 270px;
+      & > img {
+        width: 105px;
+        height: 24px;
+      }
+      & > div {
+        font-size: 16px;
+        font-family: PuHuiTiR;
+        font-weight: 400;
+        color: #2b3749;
+        line-height: 24px;
+        margin-top: 28px;
+      }
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      & > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > div {
+          font-size: 12px;
+          font-family: PuHuiTiR;
+          font-weight: 400;
+          color: #6c7a93;
+          line-height: 18px;
+          margin: 12px 0 52px 0;
+        }
+      }
+      & > div:last-child {
+        font-size: 12px;
+        font-family: PuHuiTiR;
+        font-weight: 400;
+        color: #acb8cb;
+        line-height: 18px;
+      }
+    }
+    & > div:last-child {
+      display: flex;
+      flex-direction: column;
+      width: 270px;
+      & > div {
+        margin: 10px 0;
+        & > label {
+          font-size: 14px;
+          font-family: PuHuiTiR;
+          font-weight: 400;
+          color: #6c7a93;
+          line-height: 20px;
+        }
+        & > span {
+          font-size: 14px;
+          font-family: PuHuiTiM;
+          font-weight: 500;
+          color: #2b3749;
+          line-height: 20px;
+          margin-left: 10px;
+        }
+      }
+      &>div:first-child{
+          margin-top: 0;
+      }
+    }
+  }
+}

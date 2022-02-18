@@ -1,0 +1,118 @@
+$themeColor: #ee82ee;
+$themeWidth: 1200px;
+$themeMinWidth: 1200px;
+$themeMaxWidth: 1200px;
+
+@mixin themeWidth {
+  min-width: 1200px;
+  width: 100%;
+}
+
+@mixin cenTheWid {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin showMenu {
+  animation: showMenu 0.4s ease-out;
+}
+@keyframes showMenu {
+  0% {
+    opacity: 0;
+    top: -64px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin hideMenu {
+  opacity: 0;
+  animation: hideMenu 0.4s ease-out;
+}
+@keyframes hideMenu {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    top: -64px;
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: PuHuiTiB;
+  src: url("../font/Alibaba-PuHuiTi-Bold.otf");
+}
+@font-face {
+  font-family: PuHuiTiM;
+  src: url("../font/Alibaba-PuHuiTi-Medium.otf");
+}
+@font-face {
+  font-family: PuHuiTiR;
+  src: url("../font/Alibaba-PuHuiTi-Regular.otf");
+}
+
+// .className {
+//   max-width: 50px;
+//   height: 30px;
+//   background: red;
+//   @include ellipsis();
+// }
+
+// @function px2rem($x) {
+//   @return $x * 750 / 750 / 16 + rem;
+// }
+// .px2rem {
+//   width: px2rem(1000);
+// }
+
+// @mixin float($float: left) {
+//   float: $float;
+// }
+// .classNameLeft {
+//   @include float();
+// }
+// .classNameRight {
+//   @include float(right);
+// }
+
+// @mixin triangle($direction, $size, $borderColor) {
+//   content: "";
+//   height: 0;
+//   width: 0;
+//   @if $direction == top {
+//     border-bottom: $size solid $borderColor;
+//     border-left: $size dashed transparent;
+//     border-right: $size dashed transparent;
+//   } @else if $direction == right {
+//     border-left: $size solid $borderColor;
+//     border-top: $size dashed transparent;
+//     border-bottom: $size dashed transparent;
+//   } @else if $direction == bottom {
+//     border-top: $size solid $borderColor;
+//     border-left: $size dashed transparent;
+//     border-right: $size dashed transparent;
+//   } @else if $direction == left {
+//     border-right: $size solid $borderColor;
+//     border-top: $size dashed transparent;
+//     border-bottom: $size dashed transparent;
+//   }
+// }
+
+// js操作方法
+// :root {
+//     --height-primary: 240px;
+// }
+// $header: var(--height-primary);
+
+// .el-table{
+//     height: calc(100vh - 101px - #{$header});
+// }
+// document.getElementsByClassName("cls")[0].style.setProperty("--height-primary", "500px");

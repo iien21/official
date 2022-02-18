@@ -1,0 +1,429 @@
+@import "@co/style";
+
+.home {
+  margin: 0;
+  padding: 60px 0 0 0;
+  @include themeWidth;
+
+  .head {
+    margin: 50px auto 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      width: 100%;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      font-family: PuHuiTiB;
+    }
+    h2::after {
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      content: "";
+      width: 48px;
+      height: 6px;
+      background: #1e70ff;
+      transform: translateX(-50%);
+    }
+    div {
+      height: 36px;
+      font-size: 24px;
+      font-family: PuHuiTiR;
+      font-weight: 400;
+      color: #acb8cb;
+    }
+  }
+  .dynNum {
+    height: 160px;
+    width: 100%;
+    background: #eff2f7;
+    display: flex;
+    align-items: center;
+    .dynNumBox {
+      @include cenTheWid;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 240px;
+        height: 120px;
+        position: relative;
+        & > div:first-child {
+          font-family: PuHuiTiB;
+          font-weight: bold;
+          font-size: 40px;
+          background: linear-gradient(180deg, #1e70ff 0%, #82afff 100%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        & > div:last-child {
+          font-size: 16px;
+          font-family: PuHuiTiR;
+          color: #6c7a93;
+          line-height: 24px;
+        }
+      }
+      & > div::after {
+        position: absolute;
+        right: 0;
+        content: "";
+        width: 1px;
+        height: 64px;
+        background: linear-gradient(
+          180deg,
+          rgba(172, 184, 203, 0),
+          rgba(172, 184, 203, 1),
+          rgba(172, 184, 203, 0)
+        );
+      }
+      & > div:last-child::after {
+        width: 0;
+      }
+    }
+  }
+  .choice {
+    @include cenTheWid;
+    margin: 120px auto 100px;
+    justify-content: space-between;
+    display: flex;
+    & > div {
+      width: 560px;
+      height: 312px;
+      padding: 30px 20px 20px 30px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      // .react-lazy-load-image {
+      //   img[alt="placeholde"] {
+      //     display: none;
+      //   }
+      // }
+      & > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & > div:first-child {
+          & > div:first-child {
+            color: #fff;
+            font-size: 32px;
+            font-family: PuHuiTiB;
+          }
+          & > div:nth-of-type(2) {
+            width: 125px;
+            height: 4px;
+            background: #fff;
+            margin: 12px 0;
+          }
+          & > div:nth-of-type(3) {
+            height: 36px;
+            font-size: 24px;
+            font-family: PuHuiTiR;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 36px;
+          }
+        }
+        & > div:last-child {
+          width: 140px;
+          height: 40px;
+          background: #ffffff;
+          cursor: pointer;
+          text-align: center;
+          line-height: 40px;
+        }
+      }
+      & > div:last-child {
+        align-self: flex-end;
+      }
+    }
+    & > div:first-child {
+      background: linear-gradient(135deg, #1e70ff 0%, #bcffee 100%);
+      & > div:first-child {
+        & > div:last-child {
+          color: #1e70ff;
+          font-family: PuHuiTiM;
+          font-size: 16px;
+        }
+      }
+      & > div:last-child {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    & > div:last-child {
+      background: linear-gradient(135deg, #ffa706 0%, #ffc8b0 100%);
+      & > div:first-child {
+        & > div:last-child {
+          color: #ffa706;
+          font-family: PuHuiTiM;
+          font-size: 16px;
+        }
+      }
+      & > div:last-child {
+        width: 172px;
+        height: 212px;
+      }
+    }
+  }
+  .coBrands {
+    .body {
+      width: 100%;
+      overflow: hidden;
+      // overflow: auto;
+      position: relative;
+      .imgShadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background: -webkit-linear-gradient(
+          left,
+          white 10%,
+          rgba(255, 255, 255, 0.1) 40%,
+          rgba(255, 255, 255, 0.2) 80%,
+          white 90%
+        );
+        width: 100%;
+        height: 100%;
+      }
+      @media screen and(max-width:1550px) {
+        .imgShadow {
+          background: -webkit-linear-gradient(
+            left,
+            white 0%,
+            rgba(255, 255, 255, 0.1) 20%,
+            rgba(255, 255, 255, 0.2) 90%,
+            white 100%
+          );
+        }
+      }
+      .imgBoxWrap {
+        animation: scrollBrand 30s linear infinite normal;
+        @keyframes scrollBrand {
+          0% {
+            // transform: translateX(0);
+            margin-left: 0;
+          }
+          100% {
+            // transform: translateX(-1500px);
+            margin-left: -1632px;
+          }
+        }
+        & > div {
+          display: flex;
+          img {
+            margin: 35px 50px;
+            object-fit: contain;
+          }
+        }
+        & > div:first-child {
+          margin-left: -213px;
+        }
+        & > div:nth-child(2) {
+          padding-left: 35px;
+          img {
+            margin-right: 122px;
+          }
+        }
+        & > div:last-child {
+          margin-left: -138px;
+        }
+      }
+    }
+  }
+  .scheme {
+    @include cenTheWid;
+    .body {
+      margin-top: 40px;
+      & > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & > div {
+          width: 560px;
+          height: 332px;
+          margin: 20px 0;
+          position: relative;
+          display: flex;
+          & > img {
+            align-self: flex-end;
+          }
+          .imgBox {
+            width: 520px;
+            height: 292px;
+            align-self: flex-end;
+            .react-lazy-load-image {
+              width: 100%;
+              height: 100%;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .explain {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 292px;
+            z-index: 1;
+            background: rgba(30, 112, 255, 0.7);
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            backdrop-filter: blur(5px);
+            & > div {
+              & > div:first-child {
+                font-size: 24px;
+                font-family: PuHuiTiM;
+                font-weight: 500;
+                color: #ffffff;
+              }
+              & > div:nth-child(2) {
+                margin: 7px 0;
+                width: 24px;
+                height: 4px;
+                background: #ffffff;
+              }
+              & > div:nth-child(3) {
+                font-size: 16px;
+                font-family: PuHuiTiR;
+                color: #ffffff;
+              }
+            }
+            & > img {
+              width: 32px;
+              cursor: pointer;
+            }
+          }
+          .explainLeft {
+            left: 0;
+          }
+        }
+        .schemeSpecial {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  .siteRes {
+    .body {
+      @include cenTheWid;
+      .tabHead {
+        position: relative;
+        & > div:first-child {
+          display: flex;
+          border-bottom: 1px solid #dfe5ef;
+          height: 40px;
+          box-sizing: border-box;
+          // padding-left: 20px;
+          font-size: 16px;
+          color: #6c7a93;
+          font-family: PuHuiTiR;
+          & > div {
+            margin: 0 18px;
+            cursor: default;
+            transition: all 0.5s;
+          }
+          .tabAct {
+            font-family: PuHuiTiM;
+            font-weight: 500;
+            color: #1e70ff;
+            transition: all 0.5s;
+          }
+        }
+        & > div:last-child {
+          position: absolute;
+          bottom: -1px;
+          width: 48px;
+          height: 3px;
+          background: #1e70ff;
+          left: 17px;
+          transition: all 0.5s;
+        }
+      }
+      .content {
+        margin: 40px 0 0 0;
+        position: relative;
+        height: 350px;
+        display: flex;
+        overflow: hidden;
+        & > div {
+          margin-left: 1200px;
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          z-index: 1;
+          background: #fff;
+          width: 100%;
+          & > div {
+            display: flex;
+            width: 580px;
+            height: 300px;
+            & > img {
+              width: 300px;
+              height: 300px;
+            }
+            & > div {
+              border: 1px solid #dfe5ef;
+              border-left: none;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              padding: 25px 25px 10px 25px;
+              box-sizing: border-box;
+              & > div:first-child {
+                & > div:first-child {
+                  font-size: 24px;
+                  font-family: PuHuiTiM;
+                  font-weight: 500;
+                  color: #2b3749;
+                  line-height: 36px;
+                }
+                & > div:last-child {
+                  width: 32px;
+                  height: 6px;
+                  background: #1e70ff;
+                  margin-top: 20px;
+                }
+              }
+              & > div:last-child {
+                & > div {
+                  margin: 15px 0;
+                  label {
+                    font-size: 16px;
+                    color: #6c7a93;
+                  }
+                  span {
+                    font-size: 16px;
+                    color: #2b3749;
+                    margin-left: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .conAct {
+          margin-left: 0;
+          transition: all 0.8s;
+          z-index: 2;
+        }
+        .conHide {
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+html {
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: PingFangSC-Regular, PingFangSC-Light, "Microsoft YaHei", Arial,
+    Helvetica, "Hiragino Sans GB", STXiHei, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  width: 100%;
+}
+button{
+  border: none;
+  cursor: pointer;
+}
+input{
+  border: none;
+  outline: none;
+  border: 1px solid #DFE5EF;
+  border-radius: 3px;
+}
+textarea{
+  border: none;
+  outline: none;
+  resize: none;
+  border: 1px solid #DFE5EF;
+  border-radius: 3px;
+}

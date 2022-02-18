@@ -1,0 +1,178 @@
+@import "@co/style";
+.leaveMsg {
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // z-index: 3;
+  // width: 100%;
+  // height: 140px;
+  .box {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: rgba(43, 55, 73, 0.7);
+    font-family: PuHuiTiM;
+    font-size: 24px;
+    color: #ffffff;
+    transition: all 0.8s;
+    height: 140px;
+    z-index: 3;
+  }
+  // .box::after {
+  //   position: absolute;
+  //   content: "";
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   // background: rgba(43, 55, 73, 0.7);
+  //   background: inherit;
+  //   filter: blur(22px);
+  //   z-index: 1;
+  // }
+  .bigBox {
+    width: 100%;
+    .litWrap {
+      display: none;
+    }
+    .bigWrap {
+      @include cenTheWid;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-left: 148px;
+      backdrop-filter: blur(5px);
+      .custormerImg {
+        position: absolute;
+        top: -38px;
+        left: 0;
+      }
+      & > div:nth-of-type(1) {
+        & > div:first-child {
+          height: 36px;
+          font-size: 24px;
+          font-family: PuHuiTiR;
+          font-weight: 400;
+          color: #ffffff;
+        }
+        & > div:last-child {
+          height: 60px;
+          font-size: 40px;
+          font-family: PuHuiTiB;
+          font-weight: bold;
+          color: #ffffff;
+        }
+      }
+      & > div:nth-of-type(2) {
+        width: 200px;
+        margin: 0 20px 0 70px;
+        & > div {
+          width: 100%;
+          height: 40px;
+          background: #fff;
+          margin: 20px 0;
+          display: flex;
+          & > span {
+            width: 28px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            font-family: PuHuiTiR;
+            font-weight: 400;
+            color: #6c7a93;
+            margin: 0 12px 0 16px;
+          }
+          & > input {
+            border: none;
+            height: 38px;
+            outline: none;
+            width: 140px;
+          }
+          & > input::-webkit-input-placeholder {
+            color: #acb8cb;
+          }
+        }
+      }
+      & > div:nth-of-type(3) {
+        width: 480px;
+        height: 100px;
+        background: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 30px;
+        position: relative;
+        & > span {
+          width: 45px;
+          text-align: right;
+          line-height: 40px;
+          font-size: 14px;
+          font-family: PuHuiTiR;
+          font-weight: 400;
+          color: #6c7a93;
+        }
+        & > textarea {
+          width: 422px;
+          height: 96px;
+          font-size: 14px;
+          border: none;
+          resize: none;
+          outline: none;
+          padding: 10px 10px 10px 0;
+          box-sizing: border-box;
+        }
+        & > textarea::-webkit-input-placeholder {
+          color: #acb8cb;
+        }
+        & > button {
+          width: 60px;
+          height: 28px;
+          background: #e8f0ff;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border: none;
+          color: #1e70ff;
+          background: #e8f0ff;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+      & > img:last-child {
+        cursor: pointer;
+      }
+    }
+  }
+  .littleBox {
+    width: 199px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .bigWrap {
+      display: none;
+    }
+    .litWrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > img {
+        transform: rotate(180deg);
+        margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// .leaveMsg::after {
+//   position: absolute;
+//   content: "";
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(43, 55, 73, 0.7);
+//   background: inherit;
+//   filter: blur(2px);
+//   z-index: 333;
+// }

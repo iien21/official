@@ -1,0 +1,174 @@
+.cooperate {
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  //   background: rgba($color: #2b3749, $alpha: 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  .show {
+    //   opacity: 0;
+    z-index: 3;
+    margin-left: 0;
+    transition: all 0.3s;
+  }
+  .hide {
+    //   opacity: 1;
+    z-index: 2;
+    margin-left: 400px;
+  }
+  .box {
+    width: 400px;
+    height: 420px;
+    background: #ffffff;
+    padding: 16px 24px 24px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    & > div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      left: 0;
+      top: 0;
+      padding: 16px 24px 16px;
+      box-sizing: border-box;
+      .upCon {
+        width: 352px;
+        height: 40px;
+        background: #1e70ff;
+        color: #ffffff;
+        font-size: 16px;
+        margin-top: 40px;
+        box-shadow: 0px 8px 20px -2px rgba(30, 112, 255, 0.3);
+      }
+    }
+    .bhead {
+      height: 36px;
+      font-size: 24px;
+      font-family: PuHuiTiM;
+      font-weight: 500;
+      color: #000000;
+      line-height: 36px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > img {
+        width: 24px;
+        cursor: pointer;
+      }
+    }
+    .name {
+      width: 100%;
+      & > div:first-child {
+        width: 100%;
+        position: relative;
+        & > label {
+          position: absolute;
+          left: 16px;
+          top: 9px;
+          font-size: 14px;
+          color: #6c7a93;
+        }
+        & > input {
+          width: 100%;
+          padding-left: 60px;
+          height: 40px;
+          font-size: 14px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .phone {
+      width: 100%;
+      margin: 24px 0;
+      & > div:first-child {
+        width: 100%;
+        position: relative;
+        & > label {
+          position: absolute;
+          left: 16px;
+          top: 9px;
+          font-size: 14px;
+          color: #6c7a93;
+        }
+        & > input {
+          width: 100%;
+          padding-left: 60px;
+          height: 40px;
+          font-size: 14px;
+          box-sizing: border-box;
+        }
+      }
+      & > div:last-child {
+        position: absolute;
+        height: 18px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #ee574e;
+        line-height: 18px;
+      }
+    }
+    .require {
+      width: 100%;
+      & > div:first-child {
+        width: 100%;
+        position: relative;
+        & > label {
+          position: absolute;
+          left: 16px;
+          top: 9px;
+          font-size: 14px;
+          color: #6c7a93;
+        }
+        & > textarea {
+          width: 100%;
+          padding-left: 60px;
+          padding-top: 8px;
+          height: 120px;
+          font-size: 14px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .done {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .bhead {
+        width: 100%;
+      }
+      & > img {
+        width: 226px;
+        height: 192px;
+      }
+      & > p {
+        width: 268px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #6c7a93;
+        line-height: 20px;
+        text-align: center;
+        margin: 22px 0 34px;
+      }
+      .upFin {
+        width: 352px;
+        height: 40px;
+        background: #1e70ff;
+        color: #ffffff;
+        font-size: 16px;
+        // margin-top: 40px;
+        box-shadow: 0px 8px 20px -2px rgba(30, 112, 255, 0.3);
+      }
+    }
+  }
+}
